@@ -12,6 +12,10 @@ const config = {
 
         // 解决多入口文件打包覆盖的问题
         filename: '[name].js'
+    },
+
+    externals: {
+        'jquery': 'window.jQuery'
     }
 }
 module.exports = config;
