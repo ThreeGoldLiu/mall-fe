@@ -73,3 +73,16 @@ mall front code
 ---
 
 ### webpack对样式的处理
+* 使用loader处理样式文件的加载
+  ```javascript
+    module: {
+        loaders: [
+            {
+                test: /\.css$/,
+                loader: "style-loader!css-loader"
+            }
+        ]
+    }
+    ```
+  * 这样处理的问题: **css在js中, js加载需要时间, 页面可能会有一个乱的样式问题**
+  * 如何解决: 将css样式单独放置在一个文件中 link形式的加载

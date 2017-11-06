@@ -18,5 +18,8 @@
 //     $$('body').html('external hello world');
 // }, 5000);
 
+// 引入css
+require('./index.css');
+
 // 引入公共模块
 require('../module')

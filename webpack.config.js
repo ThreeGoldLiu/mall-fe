@@ -30,6 +30,15 @@ const config = {
             name: 'common',
             filename: 'js/base.js' // 这里的路径是基于output.path的
         })
-    ]
+    ],
+
+    module: {
+        loaders: [
+            {
+                test: /\.css$/,
+                loader: "style-loader!css-loader"
+            }
+        ]
+    }
 }
 module.exports = config;
