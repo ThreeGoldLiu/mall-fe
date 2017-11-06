@@ -1,3 +1,5 @@
 'use strict';
 
-console.log('hello login');
+// console.log('hello login');
+
+require('../module');

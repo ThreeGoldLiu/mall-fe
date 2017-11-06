@@ -41,3 +41,15 @@ mall front code
             'jquery': 'window.jQuery'
         }
    ```
+ * 怎么提出一些公共的模块
+   ```javascript
+     plugins: [
+         // 提取公共的模块
+         new webpack.optimize.CommonsChunkPlugin({
+             name: 'commons',
+             filename: 'js/base.js' // 这里的路径是基于output.path的
+         })
+     ]
+   ```
+
+---
