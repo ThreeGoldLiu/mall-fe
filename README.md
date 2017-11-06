@@ -3,7 +3,7 @@ mall front code
 
 ---
 
-### webpack对脚本和样式的处理
+### webpack对脚本的处理
 
 * 如何解决多入口文件的问题
   * 将entry配置属性指定为对象的形式
@@ -51,5 +51,25 @@ mall front code
          })
      ]
    ```
+ * 公共模块
+   * page/common/index.js
+   ```javascript
+     entry: {
+         'common': ['./src/page/common/index.js'], // 公共模块
+         'index': ['./src/page/index/index.js'],
+         'login': ['./src/page/login/index.js']
+     },
+
+     plugins: [
+         // 提取公共的模块
+         new webpack.optimize.CommonsChunkPlugin({
+             // name: 'commons',
+             name: 'common',
+             filename: 'js/base.js' // 这里的路径是基于output.path的
+         })
+     ]
+   ```
 
 ---
+
+### webpack对样式的处理

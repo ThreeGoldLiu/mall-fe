@@ -5,6 +5,7 @@ const config = {
 
     // 解决多页面入口文件的问题
     entry: {
+        'common': ['./src/page/common/index.js'], // 公共模块
         'index': ['./src/page/index/index.js'],
         'login': ['./src/page/login/index.js']
     },
@@ -25,7 +26,8 @@ const config = {
     plugins: [
         // 提取公共的模块
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'commons',
+            // name: 'commons',
+            name: 'common',
             filename: 'js/base.js' // 这里的路径是基于output.path的
         })
     ]
