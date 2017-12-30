@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ThreeGoldLiu/mall-fe#readme",
   "devDependencies": {
     "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^1.0.1",
     "style-loader": "^0.19.0",
     "webpack": "^1.15.0"
   },

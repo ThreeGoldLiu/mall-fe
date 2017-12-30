@@ -1,5 +1,9 @@
 // 引入webpack变量
 const webpack = require('webpack');
+
+// 引入css单独打包的插件
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 const config = {
     // entry: './src/page/index/index.js',
 
@@ -29,16 +33,7 @@ const config = {
             // name: 'commons',
             name: 'common',
             filename: 'js/base.js' // 这里的路径是基于output.path的
-        })
+        }),
     ],
-
-    module: {
-        loaders: [
-            {
-                test: /\.css$/,
-                loader: "style-loader!css-loader"
-            }
-        ]
-    }
 }
 module.exports = config;
